@@ -1,0 +1,10 @@
+{
+    "appDescription": {
+        "message": "Una nuova scheda per concentrarsi sugli obiettivi quotidiani.",
+        "description": "La descrizione dell'estensione."
+    },
+    "focusText": {
+        "message": "Focus per oggi:",
+        "description": "Testo che indica su cosa l'utente dovrebbe concentrarsi oggi."
+    }
+}

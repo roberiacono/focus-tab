@@ -1,0 +1,10 @@
+{
+    "appDescription": {
+        "message": "A new tab to focus on daily goals.",
+        "description": "The description of the extension."
+    },
+    "focusText": {
+        "message": "Focus today:",
+        "description": "Text that indicates what the user should focus on today."
+    }
+}

@@ -1,0 +1,124 @@
+
+  
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F0F0F3;
+    color: #333;
+  }
+  
+  /* Overlay scuro che copre tutta la pagina */
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Colore scuro semi-trasparente */
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  #container {
+    display: flex;
+    align-items: center; /* Centra il testo e l'input verticalmente */
+    gap: 10px; /* Spazio tra il testo e l'input */
+    z-index: 2; /* Mostra il contenuto sopra l'overlay */
+  }
+
+  .focus-text{
+    font-size: 2em;
+  }
+  
+  .focus-text, #focus-input {
+    display: inline;
+  }
+  
+  #focus-input {
+    font-size: 2em;
+    background: transparent; /* Sfondo trasparente */
+    border: none;
+    width: auto;
+    outline: none;
+    color: #333;
+    font-weight: bold;
+    transition: font-weight 0.3s ease;
+    z-index: 3; /* Sempre in primo piano */
+  }
+
+  #focus-input, #text-width-helper {
+    padding: 5px 15px;
+  }
+
+  #focus-input.active-input {
+    background: white; /* Sfondo bianco */
+    border-radius: 4px; /* Arrotonda gli angoli */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Leggero ombreggiamento */
+  }
+
+  /* Span invisibile per calcolare la larghezza */
+#text-width-helper {
+    font-size: 2em;
+    font-weight: bold;
+    visibility: hidden;
+    white-space: pre;
+    position: absolute;
+  }
+
+/* Pulsante per il cambio tema */
+#theme-toggle {
+    position: absolute; /* Posizionamento assoluto */
+    top: 20px; /* Distanza dall'alto */
+    right: 20px; /* Distanza da destra */
+    padding: 10px 15px;
+    font-size: 1.5em; /* Aumenta la dimensione dell'icona */
+    border: none;
+    background: none; /* Nessun colore di sfondo */
+    color: inherit; /* Usa il colore ereditato */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Transizione per il cambio colore */
+  }
+  
+  #theme-toggle:hover {
+    color: #555; /* Colore al passaggio del mouse */
+  }
+
+  #theme-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease; /* Animazione al cambio di tema */
+  }
+  
+  /* Tema scuro */
+  body.dark-mode {
+    background-color: #1c1c1c; /* Colore di sfondo scuro */
+    color: #e0e0e0; /* Colore del testo schiarito */
+  }
+  
+  body.dark-mode #focus-input {
+    color: #e0e0e0; /* Colore del testo dell'input nel tema scuro */
+  }
+  
+  body.dark-mode #overlay {
+    background-color: rgba(255, 255, 255, 0.7); /* Colore dell'overlay nel tema scuro */
+  }
+  
+  body.dark-mode #theme-toggle {
+    color: #e0e0e0; /* Colore del pulsante nel tema scuro */
+  }
+  body.dark-mode #focus-input.active-input {
+    color: #333; /* Colore del pulsante nel tema scuro */
+  }
+
