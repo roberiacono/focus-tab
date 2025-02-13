@@ -1,6 +1,6 @@
 # Minimalist Focus Tab
 
-![Minimalist Focus Tab](screen.png)
+![Minimalist Focus Tab](screen.jpg)
 
 Minimalist Focus Tab offers a clean, distraction-free environment that encourages you to prioritize what matters most.
 
